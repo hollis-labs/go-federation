@@ -1,5 +1,21 @@
 # go-federation
 
+## Moved to substrate
+
+This standalone repository is deprecated. New development lives in the
+[`github.com/hollis-labs/substrate/mesh`](https://github.com/hollis-labs/substrate/tree/mesh/v0.1.0/mesh)
+module, released as **`mesh/v0.1.0`**.
+
+```sh
+go get github.com/hollis-labs/substrate/mesh@v0.1.0
+```
+
+Follow the [package and API migration guide](https://github.com/hollis-labs/substrate/blob/mesh/v0.1.0/mesh/federation/MIGRATION.md) when updating imports;
+the consolidation can include API changes. Existing standalone tags and history
+are preserved. The documentation below describes the standalone releases and
+is retained for historical reference. Applications migrate separately; this
+redirect does not deploy or update any consumer.
+
 The cross-host hop-security layer for go-messaging traffic: mTLS-pinned peer identity, per-peer authority authorization and a configurable operation set, composing go-messaging's Router and httpstore.
 
 Torque and Tether each hand-rolled federation over `go-messaging.Store`, with different trust models (Torque: pinned mutual TLS and an authority allowlist; Tether: plain HTTP and a self-asserted `?as=`). This module is the shared, hardened form of the first, as configuration.
